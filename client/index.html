@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>1 лаба</title></head>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<body>
+
+<form class="wrapp" method="post">
+    <div class="hat gowun-batang-bold">
+        <h1>Черемисова Мария</h1>
+        <h3>P3210</h3>
+        <h3>409829</h3>
+    </div>
+    <div class="main gowun-batang-regular">
+        <div class="X">
+            <label for="X" class="text"><h2>X (-3 ... 3):</h2></label>
+            <input type="text" class="textInput" id="X" name="X" required minlength="1" maxlength="10"/>
+        </div>
+        <div class="Y" id="Y">
+            <label for="Y" class="text"><h2>Y:</h2></label>
+            <div class="wrapper">
+                <input class="state" name="Y" type="radio" id="-4Y" value="-4">
+                <label class="label" for="-4Y">
+                    <div class="indicator"></div>
+                    <span class="text">-4</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="-3Y" value="-3">
+                <label class="label" for="-3Y">
+                    <div class="indicator"></div>
+                    <span class="text">-3</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="-2Y" value="-2">
+                <label class="label" for="-2Y">
+                    <div class="indicator"></div>
+                    <span class="text">-2</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="-1Y" value="-1">
+                <label class="label" for="-1Y">
+                    <div class="indicator"></div>
+                    <span class="text">-1</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="0Y" value="0">
+                <label class="label" for="0Y">
+                    <div class="indicator"></div>
+                    <span class="text">0</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="1Y" value="1">
+                <label class="label" for="1Y">
+                    <div class="indicator"></div>
+                    <span class="text">1</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="2Y" value="2">
+                <label class="label" for="2Y">
+                    <div class="indicator"></div>
+                    <span class="text">2</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="3Y" value="3">
+                <label class="label" for="3Y">
+                    <div class="indicator"></div>
+                    <span class="text">3</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state Y" name="Y" type="radio" id="4Y" value="4">
+                <label class="label" for="4Y">
+                    <div class="indicator"></div>
+                    <span class="text">4</span>
+                </label>
+            </div>
+        </div>
+        <div class="R" id="R">
+            <label class="text" for="R"><h2>R:</h2></label>
+            <div class="wrapper">
+                <input class="state R" name="R" type="radio" id="1R" value="1">
+                <label class="label" for="1R">
+                    <div class="indicator"></div>
+                    <span class="text">1</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state R" name="R" type="radio" id="2R" value="2">
+                <label class="label" for="2R">
+                    <div class="indicator"></div>
+                    <span class="text">2</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state R" name="R" type="radio" id="3R" value="3">
+                <label class="label" for="3R">
+                    <div class="indicator"></div>
+                    <span class="text">3</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state R" name="R" type="radio" id="4R" value="4">
+                <label class="label" for="4R">
+                    <div class="indicator"></div>
+                    <span class="text">4</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state R" name="R" type="radio" id="5R" value="5">
+                <label class="label" for="5R">
+                    <div class="indicator"></div>
+                    <span class="text">5</span>
+                </label>
+            </div>
+        </div>
+        <button class="btn gowun-batang-bold label" type="submit" id="accept-button">Проверить попадание</button>
+    </div>
+    <div class="picture" id="graph">
+        <svg width="400" height="400">
+            <rect class="figure" x="100" y="100" width="100" height="100" fill="rgba(209, 217, 230, 0.80)" />
+            <path class="figure" d="M100,200 A 100 100, 270, 0, 0, 200 300 V200 H200" fill="rgba(209, 217, 230, 0.80)" />
+            <polygon class="figure" points="200,300 200,200 250,200" fill="rgba(209, 217, 230, 0.80)" />
+
+            <line class="axis" x1="200" x2="210" y1="0" y2="15" />
+            <line class="axis" x1="200" x2="190" y1="0" y2="15" />
+            <line class="axis" x1="200" x2="200" y1="0" y2="400" />
+
+            <line class="axis" x1="385" x2="400" y1="190" y2="200" />
+            <line class="axis" x1="385" x2="400" y1="210" y2="200" />
+            <line class="axis" x1="0" x2="400" y1="200" y2="200" />
+
+            <line class="axis" x1="100" x2="100" y1="190" y2="210" />
+            <line class="axis" x1="150" x2="150" y1="190" y2="210" />
+            <line class="axis" x1="250" x2="250" y1="190" y2="210" />
+            <line class="axis" x1="300" x2="300" y1="190" y2="210" />
+            <line class="axis" x1="190" x2="210" y1="100" y2="100" />
+            <line class="axis" x1="190" x2="210" y1="150" y2="150" />
+            <line class="axis" x1="190" x2="210" y1="300" y2="300" />
+            <line class="axis" x1="190" x2="210" y1="250" y2="250" />
+
+            <text x="385" y="180" font-weight="bold">X</text>
+            <text x="170" y="15" font-weight="bold">Y</text>
+
+            <text x=90 y=185>-R</text>
+            <text x="215" y="305">-R</text>
+            <text x="295" y="185">R</text>
+            <text x=215 y="105">R</text>
+            <text x=130 y=185>-R/2</text>
+            <text x=215 y="155">R/2</text>
+            <text x="235" y="185">R/2</text>
+            <text x="215" y="255">-R/2</text>
+
+            <circle id="answerDot"  cx="100" cy="100" r="0" fill="black" />
+        </svg>
+    </div>
+    <div class="table">
+        <table class="results">
+            <thead>
+            <tr class="table-header">
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Попадание</th>
+                <th>Время выполнения программы</th>
+                <th>Текущее время</th>
+            </tr></thead>
+            <tbody>
+            <tr id="no-data">
+                <td colspan="6">Нет данных</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+</body>
+<script src="script.js"></script>
+</html>
