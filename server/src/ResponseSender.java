@@ -57,6 +57,7 @@ public class ResponseSender {
 
         return String.format(
                 "HTTP/1.1 400 Bad Request\r\n" +
+                "Status:400"+
                         "Content-Type: application/json\r\n" +
                         "Content-Length: %d\r\n" +
                         "\r\n" +
