@@ -58,8 +58,12 @@ async function validateInput(event) {
     fetch('/api/', request)
         .then(response => response.json())
         .then(data => {
-            handleResponse(xRes, yRes, rRes, data["isHit"], data["time"]);
-        });
+            if (data) {
+                handleResponse(xRes, yRes, rRes, data["isHit"], data["time"]);
+            }
+        }).catch(error => {
+        console.error("Fetch error: ", error);
+    });
 }
 
 async function handleResponse(xResult, yResult, rResult, hit, time) {
@@ -82,7 +86,7 @@ async function handleResponse(xResult, yResult, rResult, hit, time) {
 
 }
 
-async function writeDotResult(xResult, yResult, rResult, hit){
+async function writeDotResult(xResult, yResult, rResult, hit) {
     let passDot = document.getElementById('answerDot');
     let rSize = 400 / (rResult * 4)
 
@@ -92,6 +96,7 @@ async function writeDotResult(xResult, yResult, rResult, hit){
     passDot.setAttribute("fill", ANSWERS.HIT_COLOUR[hit]);
 
 }
+
 const submitButton = document.querySelector("#accept-button");
 submitButton.addEventListener("click", (event) => validateInput(event));
 
